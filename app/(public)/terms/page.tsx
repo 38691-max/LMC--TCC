@@ -7,6 +7,8 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { FileText, ShieldCheck, Users } from "lucide-react"
 import { Metadata } from "next"
+import Image from "next/image"
+import Logo from "@/public/logo.png"
 
 export const metadata: Metadata = {
   title: "Termos de Serviço de autenticidade",
@@ -15,8 +17,8 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main className="max-w-6xl mx-auto py-12 px-6 space-y-10">
+      <Image src={Logo} alt="Logo" className="h-24 w-32" />
 
-      {/* HERO */}
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <FileText className="w-6 h-6 text-primary" />
@@ -29,7 +31,6 @@ export default function TermsPage() {
 
       <Separator />
 
-      {/* GRID (melhor que lista vertical) */}
       <div className="grid md:grid-cols-2 gap-6">
 
         <Card>

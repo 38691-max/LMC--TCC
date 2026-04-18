@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/accordion"
 import { Shield, Database, Lock, User } from "lucide-react"
 import { Metadata } from "next"
+import Image from "next/image"
+import Logo from "@/public/logo.png"
 
 export const metadata: Metadata = {
   title: "Política de privacidade de autenticidade"
@@ -21,7 +23,7 @@ export default function PrivacyPage() {
   return (
     <main className="max-w-6xl mx-auto py-12 px-6 space-y-10">
 
-      {/* HERO */}
+      <Image src={Logo} alt="Logo" className="h-24 w-32" />
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <Shield className="w-6 h-6 text-primary" />
@@ -34,7 +36,6 @@ export default function PrivacyPage() {
 
       <Separator />
 
-      {/* ALERT */}
       <Card className="border-primary/30 bg-primary/5">
         <CardContent className="py-4 text-sm">
           Utilizamos autenticação via provedores confiáveis como Google.
@@ -42,7 +43,6 @@ export default function PrivacyPage() {
         </CardContent>
       </Card>
 
-      {/* ACCORDION */}
       <Accordion type="single" collapsible className="w-full space-y-4">
 
         <AccordionItem value="dados">
@@ -93,7 +93,6 @@ export default function PrivacyPage() {
 
       </Accordion>
 
-      {/* FOOTER */}
       <p className="text-xs text-muted-foreground text-center pt-6">
         Última atualização: {new Date().toLocaleDateString()}
       </p>
