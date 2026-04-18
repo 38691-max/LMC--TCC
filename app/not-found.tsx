@@ -23,7 +23,7 @@ export default function NotFoundPage() {
           </p>
 
           <Button asChild className="mt-4 w-full">
-            <Link href="/">
+            <Link href="/dashboard">
               Voltar para o início
             </Link>
           </Button>
