@@ -1,7 +1,7 @@
-import { GalleryVerticalEnd } from "lucide-react"
 import { SignupForm } from "@/components/sign-up-form"
 import Image from "next/image"
 import Logo from "@/public/logo.png"
+import Background from "@/public/background.png"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function SignupPage() {
         <div className="flex justify-center gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
             <div className="flex size-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
-              <GalleryVerticalEnd className="size-4" />
+              <Image src={Logo} alt="Logo" className="size-4" />
             </div>
             LMC+
           </a>
@@ -28,9 +28,9 @@ export default function SignupPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <Image
-          src={Logo}
-          alt="Image"
-          className="absolute inset-0 m-auto w-100 h-50 dark:brightness-[0.2] dark:grayscale"
+          src={Background}
+          alt="Imagem de fundo para a página de cadastro"
+          className="absolute inset-0 m-auto h-full dark:brightness-[0.2] dark:grayscale"
         />
       </div>
     </div>
