@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    # Aqui ele puxa todas as variáveis do seu arquivo .env
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    # O 'depends_on' garante que o Next só tente ligar DEPOIS do Banco
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    # Aqui também usamos o seu .env para configurar o MySQL
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
