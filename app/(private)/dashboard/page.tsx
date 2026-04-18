@@ -7,12 +7,7 @@ import { authClient } from "@/lib/auth-client";
 export default function DashboardPage() {
   const session = authClient.useSession;
   const data = session.get().data?.user;
-  const isPending = session.get().isPending;
   const error = session.get().error;
-
-  if (isPending) {
-    return <p className="text-4xl font-semibold p-6">Carregando...</p>
-  }
 
   if (error) {
     return (
