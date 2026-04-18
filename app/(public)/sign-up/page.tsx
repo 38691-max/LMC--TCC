@@ -2,6 +2,11 @@ import { GalleryVerticalEnd } from "lucide-react"
 import { SignupForm } from "@/components/sign-up-form"
 import Image from "next/image"
 import Logo from "@/public/logo.png"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Página de Cadastro",
+}
 
 export default function SignupPage() {
   return (

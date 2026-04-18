@@ -11,6 +11,11 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion"
 import { Shield, Database, Lock, User } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Política de privacidade de autenticidade"
+}
 
 export default function PrivacyPage() {
   return (

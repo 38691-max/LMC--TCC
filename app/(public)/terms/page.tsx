@@ -6,6 +6,11 @@ import {
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { FileText, ShieldCheck, Users } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Termos de Serviço de autenticidade",
+}
 
 export default function TermsPage() {
   return (
