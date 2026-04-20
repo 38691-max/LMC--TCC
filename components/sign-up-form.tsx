@@ -32,9 +32,9 @@ export function SignupForm({
         async onError({ error }) {
           switch (error.message) {
             case "User already exists.":
-              setError("name", { message: error.message })
+              setError("name", { message: "Usuário já existente. Tente outro nome." })
             case "User already exists. Use another email.":
-              setError("email", { message: error.message })
+              setError("email", { message: "Usuário já existente. Tente outro endereço de email." })
             default:
               toast.error("O cadastro falou.", { duration: 5000 })
               break;
