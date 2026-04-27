@@ -16,6 +16,7 @@ import { Spinner } from "./ui/spinner"
 import { authClient } from "@/lib/auth-client"
 import { toast, Toaster } from "sonner"
 import { redirect } from "next/navigation"
+import clsx from "clsx"
 
 export function SignupForm({
   className,
@@ -57,22 +58,50 @@ export function SignupForm({
         </div>
         <Field>
           <FieldLabel htmlFor="name">Nome Completo</FieldLabel>
-          <Input {...register("name")} id="name" type="text" placeholder="Digite seu nome completo..." required />
+          <Input
+            {...register("name")}
+            id="name"
+            type="text"
+            placeholder="Digite seu nome completo..."
+            required
+            className={clsx(errors.name && "border-red-500")}
+          />
           {errors.name && <FieldDescription className="text-red-500">{errors.name.message}</FieldDescription>}
         </Field>
         <Field>
           <FieldLabel htmlFor="email">Email</FieldLabel>
-          <Input {...register("email")} id="email" type="email" placeholder="Escolha um email que você possui..." required />
+          <Input
+            {...register("email")}
+            id="email"
+            type="email"
+            placeholder="Escolha um email que você possui..."
+            required
+            className={clsx(errors.email && "border-red-500")}
+          />
           {errors.email && <FieldDescription className="text-red-500">{errors.email.message}</FieldDescription>}
         </Field>
         <Field>
           <FieldLabel htmlFor="password">Senha</FieldLabel>
-          <Input {...register("password")} placeholder="Crie uma senha forte para sua sessão..." id="password" type="password" required />
+          <Input 
+            {...register("password")} 
+            placeholder="Crie uma senha forte para sua sessão..." 
+            id="password" 
+            type="password" 
+            required 
+            className={clsx(errors.password && "border-red-500")}
+          />
           {errors.password && <FieldDescription className="text-red-500">{errors.password.message}</FieldDescription>}
         </Field>
         <Field>
           <FieldLabel htmlFor="confirm-password">Confirmar Senha</FieldLabel>
-          <Input {...register("confirmPassword")} placeholder="Digite a mesma senha do campo acima..." id="confirm-password" type="password" required />
+          <Input 
+            {...register("confirmPassword")} 
+            placeholder="Digite a mesma senha do campo acima..." 
+            id="confirm-password" 
+            type="password" 
+            required
+            className={clsx(errors.confirmPassword && "border-red-500")}
+           />
           {errors.confirmPassword && <FieldDescription className="text-red-500">{errors.confirmPassword.message}</FieldDescription>}
         </Field>
         <Field>

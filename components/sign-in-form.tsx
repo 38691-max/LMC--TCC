@@ -24,6 +24,7 @@ import { Spinner } from "./ui/spinner"
 import { authClient } from "@/lib/auth-client"
 import { toast, Toaster } from "sonner"
 import { redirect } from "next/navigation"
+import clsx from "clsx"
 
 export function SignInForm({
   className,
@@ -104,12 +105,20 @@ export function SignInForm({
                   placeholder="Digite seu email..."
                   required
                   {...register("email")}
+                  className={clsx(errors.email && "border-red-500")}
                 />
                 {errors.email && <FieldDescription className="text-red-500">{errors.email.message}</FieldDescription>}
               </Field>
               <Field>
                 <FieldLabel htmlFor="password">Senha</FieldLabel>
-                <Input id="password" type="password" required placeholder="Digite sua senha..." {...register("password")} />
+                <Input
+                  id="password"
+                  type="password"
+                  required
+                  placeholder="Digite sua senha..."
+                  {...register("password")}
+                  className={clsx(errors.password && "border-red-500")}
+                />
                 {errors.password && <FieldDescription className="text-red-500">{errors.password.message}</FieldDescription>}
               </Field>
               <Field>
