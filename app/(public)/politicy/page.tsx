@@ -12,8 +12,6 @@ import {
 } from "@/components/ui/accordion"
 import { Shield, Database, Lock, User } from "lucide-react"
 import { Metadata } from "next"
-import Image from "next/image"
-import Logo from "@/public/logo.png"
 
 export const metadata: Metadata = {
   title: "Política de privacidade de autenticidade"
@@ -22,9 +20,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="max-w-6xl mx-auto py-12 px-6 space-y-10">
-
-      <Image src={Logo} alt="Logo" className="h-24 w-32" />
-      <div className="space-y-3">
+      <div className="space-y-3 mt-36">
         <div className="flex items-center gap-2">
           <Shield className="w-6 h-6 text-primary" />
           <h1 className="text-4xl font-bold">Política de Privacidade</h1>

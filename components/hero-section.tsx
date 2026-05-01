@@ -22,6 +22,8 @@ import { ShieldCheck } from "lucide-react";
 import { IconType } from "react-icons/lib";
 import { FaDocker } from "react-icons/fa6";
 import FooterSection from "./footer";
+import TeamSection from "./team-section";
+import TestimonialsSection from "./testimonials-section";
 
 export const transitionVariants: {
   item: Variants;
@@ -270,10 +272,10 @@ export default function HeroSection() {
             <div className="group relative m-auto max-w-5xl px-6">
               <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
                 <Link
-                  href="/"
+                  href="/integrations"
                   className="block text-sm duration-150 hover:opacity-75"
                 >
-                  <span>Explorar tecnologias da aplicação</span>
+                  <span>Explore todas as integrações da aplicação</span>
                   <ChevronRight className="ml-1 inline-block size-3" />
                 </Link>
               </div>
@@ -286,6 +288,8 @@ export default function HeroSection() {
               </div>
             </div>
           </section>
+          <TeamSection />
+          <TestimonialsSection />
         </AnimatedGroup>
         <FooterSection />
       </main>

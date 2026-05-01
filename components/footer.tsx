@@ -8,10 +8,6 @@ const links = [
     href: '/about',
   },
   {
-    title: 'contatos',
-    href: '/contacts',
-  },
-  {
     title: 'política de privacidade',
     href: '/politicy',
   },

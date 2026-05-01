@@ -9,9 +9,8 @@ import { cn } from '@/lib/utils'
 import { ThemeSwitcher } from './kibo-ui/theme-switcher'
 
 const menuItems = [
-  { name: 'política de privacidade', href: '/policy' },
-  { name: 'termos de privacidade', href: '/terms' },
-  { name: 'contatos', href: '/contacts' },
+  { name: 'política de privacidade', href: '/politicy' },
+  { name: 'termos de serviço', href: '/terms' },
   { name: 'Sobre', href: '/about' },
 ]
 
@@ -30,15 +29,22 @@ export const HeroHeader = () => {
     <header>
       <nav
         data-state={menuState && 'active'}
-        className="fixed z-20 w-full px-2">
-        <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
+        className={cn(
+          "fixed z-20 w-full transition-all duration-300 border-b",
+          isScrolled ? "bg-background/80 backdrop-blur-lg py-0" : "bg-background py-2"
+        )}
+      >
+        <div className={cn(
+          'mx-auto px-6 transition-all duration-300 lg:px-12',
+          isScrolled ? 'max-w-4xl' : 'max-w-6xl'
+        )}>
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full justify-between lg:w-auto">
               <Link
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2">
-                <Image src={Logo} alt="Logo" />
+                <Image src={Logo} alt="Logo" width={100} height={40} />
               </Link>
 
               <button

@@ -7,8 +7,6 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { FileText, ShieldCheck, Users } from "lucide-react"
 import { Metadata } from "next"
-import Image from "next/image"
-import Logo from "@/public/logo.png"
 
 export const metadata: Metadata = {
   title: "Termos de Serviço de autenticidade",
@@ -17,9 +15,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main className="max-w-6xl mx-auto py-12 px-6 space-y-10">
-      <Image src={Logo} alt="Logo" className="h-24 w-32" />
-
-      <div className="space-y-3">
+      <div className="space-y-3 mt-36">
         <div className="flex items-center gap-2">
           <FileText className="w-6 h-6 text-primary" />
           <h1 className="text-4xl font-bold">Termos de Serviço</h1>
@@ -28,11 +24,8 @@ export default function TermsPage() {
           Regras de uso da aplicação e autenticação com serviços externos.
         </p>
       </div>
-
       <Separator />
-
       <div className="grid md:grid-cols-2 gap-6">
-
         <Card>
           <CardHeader>
             <CardTitle className="flex gap-2 items-center">
@@ -44,7 +37,6 @@ export default function TermsPage() {
             Ao usar a aplicação, você concorda com login via Google e outros provedores.
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle className="flex gap-2 items-center">
