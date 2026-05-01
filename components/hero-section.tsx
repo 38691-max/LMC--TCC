@@ -23,7 +23,7 @@ import { IconType } from "react-icons/lib";
 import { FaDocker } from "react-icons/fa6";
 import FooterSection from "./footer";
 
-const transitionVariants: {
+export const transitionVariants: {
   item: Variants;
 } = {
   item: {
