@@ -30,6 +30,10 @@ export function proxy(request: NextRequest) {
     {
       path: "/politicy",
       whenAuthenticated: "next"
+    },
+    {
+      path: "/integrations",
+      whenAuthenticated: "next"
     }
   ] as const;
   const path = request.nextUrl.pathname;
