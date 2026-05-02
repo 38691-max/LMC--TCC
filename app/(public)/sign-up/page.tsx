@@ -54,7 +54,7 @@ export default function SignupPage() {
           <Image
             src={Background}
             alt="Imagem de fundo para a página de cadastro"
-            className="absolute inset-0 m-auto h-full dark:brightness-[0.2] dark:grayscale"
+            className="absolute inset-0 m-auto h-full object-cover dark:opacity-100"
           />
         </div>
       </div>
