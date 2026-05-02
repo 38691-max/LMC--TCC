@@ -28,7 +28,7 @@ export function proxy(request: NextRequest) {
       whenAuthenticated: "next"
     },
     {
-      path: "/politicy",
+      path: "/privacy",
       whenAuthenticated: "next"
     },
     {

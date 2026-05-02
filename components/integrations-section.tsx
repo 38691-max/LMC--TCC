@@ -29,48 +29,56 @@ export default function IntegrationsSection() {
           <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <IntegrationCard
               title="Next.js"
+              link="https://nextjs.org/docs"
               description="Next js is a React framework that enables several extra features, including server-side rendering and generating static websites.">
               <RiNextjsFill />
             </IntegrationCard>
 
             <IntegrationCard
               title="Vercel"
+              link="https://vercel.com/docs"
               description="Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow.">
               <SiVercel />
             </IntegrationCard>
 
             <IntegrationCard
               title="Google"
+              link="https://developers.google.com/docs"
               description="google is a technology company that specializes in Internet-related services and products, including online advertising technologies, search engine, cloud computing, software, and hardware.">
               <SiGoogle />
             </IntegrationCard>
 
             <IntegrationCard
               title="Github"
+              link="https://docs.github.com"
               description="Github is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.">
               <SiGithub />
             </IntegrationCard>
 
             <IntegrationCard
               title="Shadcn/UI"
+              link="https://ui.shadcn.com/docs"
               description="shadcn/ui is a collection of reusable components built using Radix UI and Tailwind CSS. It provides a set of pre-designed and customizable UI components that can be easily integrated into web applications.">
               <SiShadcnui />
             </IntegrationCard>
 
             <IntegrationCard
               title="Docker"
+              link="https://docs.docker.com"
               description="Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.">
               <FaDocker />
             </IntegrationCard>
 
             <IntegrationCard
               title="Prisma ORM"
+              link="https://www.prisma.io/docs"
               description="Prisma is a database toolkit that simplifies database access and management. It provides a type-safe database client for Node.js and TypeScript.">
               <SiPrisma />
             </IntegrationCard>
 
             <IntegrationCard
               title="Better Auth"
+              link="https://www.better-auth.com/docs"
               description="Better Auth is an open-source authentication solution that provides a secure and customizable way to handle user authentication in web applications. It offers features such as passwordless login, social login, and multi-factor authentication.">
               <SiBetterauth />
             </IntegrationCard>

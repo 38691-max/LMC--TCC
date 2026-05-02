@@ -9,7 +9,7 @@ const links = [
   },
   {
     title: 'política de privacidade',
-    href: '/politicy',
+    href: '/privacy',
   },
   {
     title: 'termos de serviço',
