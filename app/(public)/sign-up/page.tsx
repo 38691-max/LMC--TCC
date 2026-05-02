@@ -4,6 +4,7 @@ import Background from "@/public/background.png"
 import { Metadata } from "next"
 import { HeroHeader } from "@/components/header"
 import FooterSection from "@/components/footer"
+import { AnimatedGroup } from "@/components/motion-primitivies/animated-group"
 
 export const metadata: Metadata = {
   title: "Página de Cadastro",
@@ -17,7 +18,35 @@ export default function SignupPage() {
         <div className="flex flex-col gap-4 p-6 md:p-10 mt-36">
           <div className="flex flex-1 items-center justify-center">
             <div className="w-full max-w-xs">
-              <SignupForm />
+              <AnimatedGroup
+                variants={{
+                  container: {
+                    visible: {
+                      transition: {
+                        delayChildren: 0.35,
+                      },
+                    },
+                  },
+                  item: {
+                    hidden: {
+                      opacity: 0,
+                      y: 20,
+                    },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        type: "spring",
+                        bounce: 0.3,
+                        duration: 2.5,
+                      },
+                    },
+                  },
+                }}
+              >
+                <SignupForm />
+              </AnimatedGroup>
+
             </div>
           </div>
         </div>
