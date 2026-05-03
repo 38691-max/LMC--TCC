@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LMC+ ",
   icons: {
-    icon: "/app/favicon.ico",
+    icon: "/favicon.ico",
   },
   applicationName: "LMC+",
   appleWebApp: {
