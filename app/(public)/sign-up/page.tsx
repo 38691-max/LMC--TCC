@@ -2,8 +2,8 @@ import { SignupForm } from "@/components/sign-up-form"
 import Image from "next/image"
 import Background from "@/public/background.png"
 import { Metadata } from "next"
-import { HeroHeader } from "@/components/header"
-import FooterSection from "@/components/footer"
+import { Header } from "@/components/header"
+import Footer from "@/components/footer"
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function SignupPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <div className="grid min-h-svh lg:grid-cols-2">
         <div className="flex flex-col gap-4 p-6 md:p-10 mt-36">
           <div className="flex flex-1 items-center justify-center">
@@ -58,7 +58,7 @@ export default function SignupPage() {
           />
         </div>
       </div>
-      <FooterSection />
+      <Footer />
     </>
   )
 }

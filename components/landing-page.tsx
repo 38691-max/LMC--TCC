@@ -3,7 +3,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/motion-primitivies/text-effect";
-import { HeroHeader } from "./header";
+import { Header } from "./header";
 import Image from "next/image";
 import { Variants } from 'motion/react';
 import {
@@ -20,9 +20,9 @@ import {
 import { ShieldCheck } from "lucide-react";
 import { IconType } from "react-icons/lib";
 import { FaDocker } from "react-icons/fa6";
-import FooterSection from "./footer";
-import TeamSection from "./team-section";
-import TestimonialsSection from "./testimonials-section";
+import Footer from "./footer";
+import Team from "./team";
+import Testimonials from "./testimonials";
 import Lifestyle from "@/public/lifestyle.png"
 import VibrantParty from "@/public/vibrant-party.png"
 
@@ -90,10 +90,10 @@ const devStacks: DevStack[] = [
   }
 ];
 
-export default function HeroSection() {
+export default function LandingPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <main className="overflow-hidden">
         <div
           aria-hidden
@@ -180,8 +180,8 @@ export default function HeroSection() {
                   LMC+ PLUS
                 </TextEffect>
                 <TextEffect
-                  per="line"
-                  preset="fade-in-blur"
+                  per="word"
+                  preset="fade"
                   speedSegment={0.3}
                   delay={0.5}
                   as="p"
@@ -289,10 +289,10 @@ export default function HeroSection() {
               </div>
             </div>
           </section>
-          <TeamSection />
-          <TestimonialsSection />
+          <Team />
+          <Testimonials />
         </AnimatedGroup>
-        <FooterSection />
+        <Footer />
       </main>
     </>
   );

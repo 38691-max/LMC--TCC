@@ -1,13 +1,13 @@
-import FooterSection from "@/components/footer";
-import { HeroHeader } from "@/components/header";
-import { transitionVariants } from "@/components/hero-section";
-import IntegrationsSection from "@/components/integrations-section";
+import Footer from "@/components/footer";
+import { Header } from "@/components/header";
+import { transitionVariants } from "@/components/landing-page";
+import Integrations from "@/components/integrations";
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group";
 
 export default function IntegrationsPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <AnimatedGroup
         variants={{
           container: {
@@ -21,9 +21,9 @@ export default function IntegrationsPage() {
           ...transitionVariants,
         }}
       >
-        <IntegrationsSection />
+        <Integrations />
       </AnimatedGroup>
-      <FooterSection />
+      <Footer />
     </>
   )
 }

@@ -1,5 +1,5 @@
-import FooterSection from "@/components/footer";
-import { HeroHeader } from "@/components/header";
+import Footer from "@/components/footer";
+import { Header } from "@/components/header";
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group";
 import { SignInForm } from "@/components/sign-in-form";
 import { Metadata } from "next";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function SignInPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
         <div className="flex w-full max-w-sm flex-col gap-6 mt-36">
           <AnimatedGroup
@@ -45,7 +45,7 @@ export default function SignInPage() {
 
         </div>
       </div>
-      <FooterSection />
+      <Footer />
     </>
   )
 }

@@ -33,7 +33,7 @@ const members = [
   },
 ]
 
-export default function TeamSection() {
+export default function Team() {
   return (
     <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
       <div className="mx-auto max-w-5xl border-t px-6">

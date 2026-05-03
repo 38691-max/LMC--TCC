@@ -1,5 +1,5 @@
-import FooterSection from "@/components/footer"
-import { HeroHeader } from "@/components/header"
+import Footer from "@/components/footer"
+import { Header } from "@/components/header"
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group"
 import { TextEffect } from "@/components/motion-primitivies/text-effect"
 import {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <main className="max-w-6xl mx-auto py-12 px-6 space-y-10">
         <div className="space-y-3 mt-36">
           <div className="flex items-center gap-2">
@@ -133,7 +133,7 @@ export default function TermsPage() {
           {`Última atualização: ${new Date().toLocaleDateString()}`}
         </TextEffect>
       </main>
-      <FooterSection />
+      <Footer />
     </>
   )
 }

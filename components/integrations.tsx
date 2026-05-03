@@ -16,7 +16,7 @@ import {
 } from "react-icons/si";
 import { FaDocker } from "react-icons/fa6";
 
-export default function IntegrationsSection() {
+export default function Integrations() {
   return (
     <section>
       <div className="py-32">

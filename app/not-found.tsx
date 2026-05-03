@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Metadata } from "next";
-import { HeroHeader } from "@/components/header";
-import FooterSection from "@/components/footer";
+import { Header } from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "404 - Página Não Encontrada",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
   return (
     <>
-      <HeroHeader />
+      <Header />
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
         <Card className="w-full max-w-md text-center shadow-lg">
           <CardContent className="flex flex-col items-center gap-4 p-8">
@@ -34,7 +34,7 @@ export default function NotFoundPage() {
           </CardContent>
         </Card>
       </div>
-      <FooterSection />
+      <Footer />
     </>
   );
 }
