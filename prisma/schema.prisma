@@ -9,6 +9,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
+  url     = env("DATABASE_URL")
 }
 
 model User {
@@ -73,3 +74,4 @@ model Verification {
   @@index([identifier(length: 191)])
   @@map("verification")
 }
+
