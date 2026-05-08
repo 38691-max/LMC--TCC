@@ -11,7 +11,7 @@ import { ThemeSwitcher } from './kibo-ui/theme-switcher'
 const menuItems = [
   { name: 'política de privacidade', href: '/privacy' },
   { name: 'termos de serviço', href: '/terms' },
-  { name: 'Sobre', href: '/about' },
+  { name: 'sobre', href: '/about' },
 ]
 
 export const Header = () => {
