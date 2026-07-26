@@ -1,36 +1,36 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
-generator client {P
+generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mysql"
-  url     = env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model User {
   id            String    @id
   name          String    @db.Text
-  email         String
+  email         String    @unique
   emailVerified Boolean   @default(false)
   image         String?   @db.Text
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  sessions      Session[]
-  accounts      Account[]
 
-  @@unique([email])
+  accounts      Account[]
+  sessions      Session[]
+
+  // Novas relações
+  programs      Program[]
+  insertions    Insertion[]
+  schedules     Schedule[]
+
   @@map("user")
 }
 
 model Session {
   id        String   @id
   expiresAt DateTime
-  token     String
+  token     String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   ipAddress String?  @db.Text
@@ -38,8 +38,7 @@ model Session {
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([token])
-  @@index([userId(length: 191)])
+  @@index([userId])
   @@map("session")
 }
 
@@ -48,7 +47,6 @@ model Account {
   accountId             String    @db.Text
   providerId            String    @db.Text
   userId                String
-  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   accessToken           String?   @db.Text
   refreshToken          String?   @db.Text
   idToken               String?   @db.Text
@@ -58,8 +56,9 @@ model Account {
   password              String?   @db.Text
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([userId(length: 191)])
+  @@index([userId])
   @@map("account")
 }
 
@@ -75,3 +74,99 @@ model Verification {
   @@map("verification")
 }
 
+model Program {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+
+  defaultTime Int
+
+  isFixed     Boolean  @default(false)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId String
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  episodes Episode[]
+  gradeItems GradeItem[]
+}
+
+model Episode {
+
+  id String @id @default(cuid())
+
+  title String
+
+  duration Int
+
+  fileName String
+
+  programId String
+  program Program @relation(fields: [programId], references: [id], onDelete: Cascade)
+
+  gradeItems GradeItem[]
+}
+
+model Insertion {
+
+  id String @id @default(cuid())
+
+  name String
+
+  duration Int
+
+  fileName String
+
+  category String
+
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  gradeItems GradeItem[]
+}
+
+model Schedule {
+
+  id String @id @default(cuid())
+
+  week DateTime
+
+  createdAt DateTime @default(now())
+
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  items GradeItem[]
+}
+
+model GradeItem {
+
+  id String @id @default(cuid())
+
+  startsAt DateTime
+
+  duration Int
+
+  type ItemType
+
+  scheduleId String
+  schedule Schedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+
+  programId String?
+  program Program? @relation(fields: [programId], references: [id])
+
+  episodeId String?
+  episode Episode? @relation(fields: [episodeId], references: [id])
+
+  insertionId String?
+  insertion Insertion? @relation(fields: [insertionId], references: [id])
+}
+
+enum ItemType {
+  PROGRAM
+  INSERTION
+  LIVE
+  BREAK
+}
