@@ -1,36 +1,299 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 LMC+ PLUS
 
-## Getting Started
+**Trabalho de Conclusão de Curso** — [RaphaelDiSanto]
 
-First, run the development server:
+![Next.js](https://nextjs.org/docs)
+![TypeScript](https://www.typescriptlang.org/docs/)
+![Tailwind CSS](https://www.typescriptlang.org/docs/)
+![PostgreSQL](https://dev.mysql.com/doc/)
+![PrismaORM](https://www.prisma.io/docs)
+![BetterAuth](https://better-auth.com/docs/introduction)
+![Docker](https://docs.docker.com)
+![ExcelJS](https://github.com/exceljs/exceljs)
+![ShadCN](https://ui.shadcn.com/docs/installation)
+
+---
+
+## 📋 Sumário
+
+* [Sobre o Projeto](#-sobre-o-projeto)
+* [Funcionalidades](#-funcionalidades)
+* [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+* [Arquitetura do Projeto](#-arquitetura-do-projeto)
+* [Pré-requisitos](#️-pré-requisitos)
+* [Como Rodar o Projeto](#-como-rodar-o-projeto)
+* [Variáveis de Ambiente](#-variáveis-de-ambiente)
+* [Estrutura de Pastas](#-estrutura-de-pastas)
+* [Rotas da Aplicação](#-rotas-da-aplicação)
+* [Banco de Dados](#-banco-de-dados)
+* [Scripts Disponíveis](#-scripts-disponíveis)
+* [Autor](#-autor)
+
+---
+
+## 📖 Sobre o Projeto
+
+Este projeto foi desenvolvido como Trabalho de Conclusão de Curso e tem como objetivo **[descrever o objetivo principal da plataforma]**.
+
+A proposta surgiu a partir da identificação do problema **[descrever o problema]**, que impacta **[público-alvo]**. Para solucionar essa questão, foi desenvolvida uma plataforma capaz de **[descrever a solução]**.
+
+O sistema permite que os usuários possam **[descrever as funcionalidades principais]**, tornando o processo mais eficiente, acessível e seguro.
+
+---
+
+## ✅ Funcionalidades
+
+* ✅ Autenticação de usuários (login e cadastro)
+* ✅ Controle de acesso por perfil
+* ✅ Gerenciamento de dados da aplicação
+* ✅ Painel administrativo
+* ✅ Integração com banco de dados MySQL
+* ✅ Banco modelado pelo Prisma ORM
+* ✅ Banco do Docker
+* ✅ Responsividade para dispositivos móveis
+* ✅ Interface moderna e intuitiva com Shadcn
+
+> Atualize esta seção com as funcionalidades reais do sistema.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+| Categoria      | Tecnologia                    | Versão           |
+| -------------- | ----------------------------- | ---------------- |
+| Framework      | Next.js (App Router)          | 15.x             |
+| Linguagem      | TypeScript                    | 5.x              |
+| Estilização    | Tailwind CSS                  | 3.x ou 4.x       |
+| Banco de Dados | MySQL                    | 16.x             |
+| ORM            | Prisma ORM          | 5.x              |
+| Autenticação   | Better Auth |  |
+| Hospedagem     | Vercel, Render ou similar     | —                |
+
+---
+
+## 🏗 Arquitetura do Projeto
+
+O projeto segue a arquitetura **App Router do Next.js**, promovendo separação clara entre interface, regras de negócio e persistência de dados.
+
+### Camadas
+
+* **Frontend:** Componentes React com SSR, CSR e Server Components.
+* **Backend:** API Routes e Server Actions.
+* **Banco de Dados:** PostgreSQL.
+* **Autenticação:** JWT, Auth.js ou solução equivalente.
+
+```text
+Cliente (Browser)
+      │
+      ▼
+ Next.js Application
+ ├── App Router
+ ├── API Routes
+ ├── Server Actions
+ └── Components
+      │
+      ▼
+ PostgreSQL Database
+```
+
+---
+
+## ⚙️ Pré-requisitos
+
+Antes de iniciar, certifique-se de possuir:
+
+* Node.js >= 18
+* npm >= 9, pnpm ou yarn
+* PostgreSQL >= 14
+* Git
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+cd nome-do-repositorio
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+
+# ou
+
+pnpm install
+```
+
+### 3. Configure as variáveis de ambiente
+
+```bash
+cp .env.example .env.local
+```
+
+Edite o arquivo `.env.local` com os valores adequados.
+
+### 4. Configure o banco de dados
+
+```bash
+npx prisma generate
+
+npx prisma migrate dev --name init
+```
+
+Popular dados iniciais (opcional):
+
+```bash
+npx prisma db seed
+```
+
+### 5. Execute o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# orj
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔐 Variáveis de Ambiente
 
-To learn more about Next.js, take a look at the following resources:
+Crie um arquivo `.env.local`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+# Banco de Dados
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Autenticação
+NEXTAUTH_SECRET="sua-chave-secreta"
+NEXTAUTH_URL="http://localhost:3000"
 
-## Deploy on Vercel
+# Variáveis adicionais
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Nunca envie arquivos `.env` para o repositório.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📁 Estrutura de Pastas
+
+```text
+📦 nome-do-projeto
+┣ 📂 app/
+┃ ┣ 📂 (auth)/
+┃ ┃ ┣ 📂 login/
+┃ ┃ ┗ 📂 cadastro/
+┃ ┣ 📂 (dashboard)/
+┃ ┃ ┣ 📂 usuarios/
+┃ ┃ ┗ 📂 configuracoes/
+┃ ┣ 📂 api/
+┃ ┃ ┣ 📂 auth/
+┃ ┃ ┗ 📂 recursos/
+┃ ┣ 📄 layout.tsx
+┃ ┗ 📄 page.tsx
+┣ 📂 components/
+┃ ┣ 📂 ui/
+┃ ┗ 📂 features/
+┣ 📂 lib/
+┃ ┣ 📄 db.ts
+┃ ┗ 📄 auth.ts
+┣ 📂 prisma/
+┃ ┣ 📄 schema.prisma
+┃ ┗ 📂 migrations/
+┣ 📂 public/
+┣ 📂 types/
+┣ 📄 .env.example
+┣ 📄 next.config.ts
+┣ 📄 tsconfig.json
+┣ 📄 package.json
+┗ 📄 README.md
+```
+
+---
+
+## 🗺 Rotas da Aplicação
+
+| Rota                       | Descrição                 | Acesso      |
+| -------------------------- | ------------------------- | ----------- |
+| `/`                        | Página inicial            | Público     |
+| `/login`                   | Autentação de usuários    | Público     |
+| `/cadastro`                | Cadastro de usuários      | Público     |
+| `/dashboard`               | Painel principal          | Autenticado |
+| `/dashboard/usuarios`      | Gerenciamento de usuários | Autenticado |
+| `/dashboard/configuracoes` | Configurações do sistema  | Autenticado |
+| `/api/auth/*`              | Endpoints de autenticação | Interno     |
+| `/api/*`                   | Endpoints da aplicação    | Interno     |
+
+> Atualize conforme as rotas reais do projeto.
+
+---
+
+## 🗄 Banco de Dados
+
+O sistema utiliza PostgreSQL para armazenamento dos dados.
+
+### Modelo Conceitual Simplificado
+
+```text
+┌─────────────┐
+│   Usuario   │
+├─────────────┤
+│ id          │
+│ nome        │
+│ email       │
+│ senha_hash  │
+│ criado_em   │
+└─────────────┘
+```
+
+Caso o projeto possua múltiplas entidades, recomenda-se incluir:
+
+* Diagrama ER
+* Modelo lógico
+* Modelo físico
+* Imagem exportada do banco
+
+---
+
+## 📜 Scripts Disponíveis
+
+```bash
+# Desenvolvimento
+npm run dev
+
+# Produção
+npm run build
+npm run start
+
+# Qualidade de código
+npm run lint
+
+# Prisma
+npx prisma generate
+npx prisma migrate dev
+npx prisma studio
+```
+
+---
+
+## 👤 Autor
+
+**[Seu Nome Completo]**
+
+* 🎓 Curso: [Nome do Curso]
+* 🏛️ Instituição: [Nome da Instituição]
+* 📅 Ano: [Ano de Defesa]
+* 🔗 LinkedIn: https://linkedin.com/in/seu-perfil
+* 📧 E-mail: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
+
+# Desenvolvido com 💙 como Trabalho de Conclusão de Curso
