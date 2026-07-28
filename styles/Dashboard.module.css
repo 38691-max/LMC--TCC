@@ -1,0 +1,748 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ffb58d;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #57575767;
+}
+
+.left_side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right_side {
+    display: flex;
+    align-items: center;
+}
+
+.lmc_logo {
+    height: 60px;
+    padding-left: 30px;
+}
+
+.area{
+    width: 100%;
+    height: 100dvh;
+    min-width: 100%;
+    min-height: 650px;
+    padding: 90px 0 0 120px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 3%;
+}
+
+.area button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    color: #fff;
+    background-color: #EA641E;
+    border: none;
+    border-radius: 10px;
+}
+
+.area button:hover{
+    cursor: pointer;
+    background-color: #d15b1b;
+}
+
+.area button:active{
+    background-color: #f36a20;
+}
+
+.area_prog_perf{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.programacao{
+    width: 90%;
+    height: 30vh;
+    padding: 10px;
+    min-width: 436px;
+    max-width: 552px;
+    min-height: 250px;
+    max-height: 300px;
+    margin-left: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000056;
+}
+
+.prog_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prog_header h1{
+    color: #EA641E;
+}
+
+.prog_content{
+    width: 100%;
+    height: 80%;
+    display: grid;
+}
+
+.prog_content h3{
+    margin-top: auto;
+    margin-left: 15px;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #7474749d;
+}
+
+.prog_info{
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    color: #747474;
+}
+
+.prog_info img{
+    width: 90%;
+    max-width: 230px;
+    height: 100%;
+}
+
+#prog_titulo{
+    margin: 0;
+    font-weight: 500;
+    color: #000;
+}
+
+#prog_horario{
+    margin-bottom: 15px;
+}
+
+.profile{
+    width: 90%;
+    height: 30vh;
+    padding: 10px;
+    max-width: 552px;
+    min-width: 436px;
+    min-height: 250px;
+    max-height: 300px;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000056;
+}
+
+.profile_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_header h1{
+    color: #EA641E;
+}
+
+.profile_content{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.profile_content h3{
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 15px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #7474749d;
+}
+
+.prof_info{
+    width: 100%;
+    height: 14vh;
+    min-height: 131px;
+    max-height: 14vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+}
+
+.prof_info h3{
+    color: #000;
+}
+
+.prof_info:hover{
+    overflow-y: auto;
+}
+
+.prof_info::-webkit-scrollbar-track{
+    border-radius: 20px;
+}
+
+.perfil{
+    width: 90%;
+    height: 10vh;
+    padding: 10px;
+    min-height: 93px;
+    margin-top: 13px;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: auto 0.6fr;
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0000002f;
+}
+
+.perfil img{
+    width: 60px;
+    height: 60px;
+}
+
+#perf_titulo{
+    font-size: 21px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.perfil p{
+    font-size: 17px;
+    max-width: 200px;
+    max-height: 70px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+    color: #747474;
+}
+
+.perfil p:hover{
+    overflow-y: auto;
+}
+
+.perfil p::-webkit-scrollbar-track{
+    background: #33333373;
+    border-radius: 20px;
+}
+
+.perfil p::-webkit-scrollbar-thumb{
+    background: #d3d3d3be;
+}
+
+.perfil div{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.perfil button{
+    width: 95px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #F39911;
+}
+
+.perfil button:hover{
+    cursor: pointer;
+    background-color: #ffa012;   
+}
+
+.perfil button:active{
+    background-color: #db8a10;
+}
+
+.area_guias{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.guias{
+    width: 90%;
+    height: 35vh;
+    padding: 10px;
+    max-width: 1124px;
+    min-width: 892px;
+    min-height: 250px;
+    display: grid;
+    grid-template-rows: 0.4fr 1fr;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00000056;
+}
+
+.guias button{
+    width: 150px;
+    height: 30px;
+    font-size: 1em;
+    background-color: #F39911;
+    border-radius: 20px;
+}
+
+.guias button:hover{
+    cursor: pointer;
+    background-color: #ffa012;
+}
+
+.guias button:active{
+    background-color: #db8a10;
+}
+
+.guias_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guias_header h1{
+    margin-bottom: auto;
+    color: #EA641E;
+}
+
+.guias_header button{
+    width: 150px;
+    height: 35px;
+    margin-bottom: auto;
+    font-size: 1em;
+    background-color: #EA641E;
+    border-radius: 10px;
+}
+
+.guias_header button:hover{
+    cursor: pointer;
+    background-color: #d15b1b;
+}
+
+.guias_header button:active{
+    background-color: #f36a20;
+}
+
+.guias_content{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding-bottom: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.guias_content h1{
+    font-weight: 570;
+}
+
+.guias_content h2{
+    width: 90%;
+    color: #747474;
+    font-weight: 500;
+}
+
+.guias_elemento{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #00000056;
+}
+
+.guias_elemento h1{
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.guias_elemento h2{
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.guias_elemento button{
+    width: 50%;
+    height: 45px;
+    padding: 0 3px;
+    font-size: 1em;
+    margin-left: auto;
+}
+
+.area_importar{
+    width: 100%;
+    height: 15vh;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.importar{
+    width: 90%;
+    height: 13vh;
+    margin-bottom: auto;
+    max-width: 1124px;
+    min-width: 892px;
+    min-height: 100px;
+    padding: 5px 25px 5px 15px;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 15px #00000056;
+}
+
+.importar_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.importar h1{
+    color: #EA641E;
+    font-weight: 570;
+}
+
+.importar h2{
+    color: #747474;
+    font-weight: 450;
+    font-size: 1.3em;
+}
+
+.importar_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.importar_2 h2{
+    width: 230px;
+    margin-left: auto;
+}
+
+.importar_2 button{
+    width: 150px;
+    height: 60px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 1220px){
+
+    .active {
+        background: #333;
+        color: #fff;
+        border: 2px solid #5e5e5e;
+    }
+
+    .inactive{
+        background-color: #f1f1f1;
+    }
+
+    /* Layout */
+    .main {
+        flex-direction: column;
+    }
+
+    .area {
+        padding: 90px 0 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    .area button{
+        height: 40px;
+    }
+
+    .area_prog_perf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .programacao,
+    .profile {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        max-height: none;
+        margin: 0;
+    }
+
+    .guias {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        max-height: 430px;
+    }
+
+    .guias button{
+        height: 40px;
+    }
+
+    .guias_content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .guias_content button{
+        height: 45px;
+    }
+
+    .guias_elemento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .guias_elemento button {
+        width: 100%;
+    }
+
+    .importar {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .importar_2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .importar_2 h2{
+        margin: 0;
+    }
+
+    /* Esconde texto */
+    .page_atual {
+        display: none;
+    }
+
+    .importar_info {
+        display: none;
+    }
+
+    /* Header */
+    .horizontal_bar {
+        height: 70px;
+        min-height: 70px;
+    }
+
+    .lmc_logo {
+        height: 40px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Botão da sidebar */
+    .hamburger {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: block;
+        font-size: 25px;
+        background: none;
+        border: 1px solid #ccc;
+        margin-left: 10px;
+    }
+
+    .active {
+        background: #333;
+        color: #fff;
+        border: 2px solid #5e5e5e;
+    }
+
+    .inactive{
+        background-color: #f1f1f1;
+    }
+
+    /* Layout */
+    .main {
+        flex-direction: column;
+    }
+
+    .area {
+        padding: 90px 10px 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    .area button{
+        height: 40px;
+    }
+
+    .area_prog_perf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .programacao,
+    .profile {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        max-height: none;
+        margin: 0;
+    }
+
+    .guias {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        max-height: 430px;
+    }
+
+    .guias button{
+        height: 40px;
+    }
+
+    .guias_content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .guias_content button{
+        height: 45px;
+    }
+
+    .guias_elemento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .guias_elemento button {
+        width: 100%;
+    }
+
+    .importar {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .importar_2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .importar_2 h2{
+        margin: 0;
+    }
+
+    /* Esconde texto */
+    .page_atual {
+        display: none;
+    }
+
+    .importar_info {
+        display: none;
+    }
+
+    /* Header */
+    .horizontal_bar {
+        height: 70px;
+        min-height: 70px;
+    }
+
+    .lmc_logo {
+        height: 40px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .prog_header{
+        flex-direction: column;
+    }
+
+    .prog_info{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .prog_info img{
+        display: none;
+    }
+
+    .profile{
+        height: 290px;
+    }
+
+    .profile_header{
+        flex-direction: column;
+    }
+
+    .guias{
+        max-height: 330px;
+    }
+
+    .guias_content{
+        padding: 10px;
+    }
+
+    .guias_content h2{
+        display: none;
+    }
+
+    .guias_content h1{
+        margin: 0;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .guias{
+        max-height: 370px;
+    }
+
+    .perfil img{
+        display: none;
+    }
+
+    #perf_titulo{
+        margin-left: 0;
+    }
+}

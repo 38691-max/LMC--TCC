@@ -1,0 +1,176 @@
+.login_main {
+    display: flex;
+}
+
+.boing {
+    height: 100dvh;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    Estilizando a imagem
+*/
+
+.imagem {
+    width: 45%;
+    height: 100dvh;
+    background: linear-gradient(90deg, #3d1f50a6 0%, #8d3d12a6 100%), url(../assets/lmcplus.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*
+    Parte do Formulário
+*/
+
+.login_form {
+    box-shadow: 0 0 20px 1px #00000026;
+    width: min(75%, 750px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc-size(auto, size * 1.1);
+    transition: 0.2s;
+}
+
+.login_form:hover {
+    box-shadow: 0 0 20px 1px #00000033;
+}
+
+.formulario_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_title {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-top: 15px;
+}
+
+.input_container {
+    background: oklch(from var(--background-color) calc(l - 0.05) c h);
+    display: flex;
+    width: 80%;
+    height: 50px;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.input_icon {
+    height: 25px;
+    margin-left: 20px;
+    padding-right: 10px;
+    border-right: #00000036 1px solid;
+}
+
+.login_input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    padding-left: 15px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.login_input::placeholder {
+    font-size: 1.4rem;
+    color: var(--text-placeholder-color);
+}
+
+.login_input:active,
+.login_input:focus {
+    outline: none;
+}
+
+.esqueceu_container {
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+}
+
+.login_esqueceu {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 1.1em;
+
+}
+
+.login_esqueceu:hover {
+    color: oklch(from var(--main-color) calc(l + 0.1) c h);
+}
+
+.entrar {
+    width: 40%;
+    height: 50px;
+    background-color: oklch(from var(--main-color) calc(l - 0.01) c h);
+    color: #fff;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 15px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: ease-in 0.1s;
+}
+
+.entrar:hover {
+    background: oklch(from var(--main-color) calc(l + 0.04) calc(c - 0.01) h);
+    transform: scale(1.01);
+}
+
+.entrar:active {
+    background: oklch(from var(--main-color) calc(l - 0.04) calc(c + 0.01) h);
+    transform: scale(1);
+}
+
+@media screen and (max-width: 968px) {
+    .login_main {
+        width: 100%;
+        height: 100dvh;
+        background: linear-gradient(90deg, #3d1f50a6 0%, #8d3d12a6 100%), url(../assets/lmcplus.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boing {
+        width: 100%;
+    }
+
+    .login_title {
+        text-align: center;
+    }
+
+    .login_form {
+        background: #ffffff;
+        width: 90%;
+    }
+
+    .esqueceu_container {
+        justify-content: center;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .entrar {
+        width: 60%;
+    }
+}

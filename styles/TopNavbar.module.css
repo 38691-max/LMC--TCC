@@ -1,0 +1,184 @@
+.horizontal_bar {
+    width: 100%;
+    background: #f8f8fa;
+    border-bottom: 1px solid #d7d7da;
+    height: 65px;
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    overflow-x: auto;
+}
+
+.horizontal_bar::-webkit-scrollbar{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.img_link{
+    margin-right: 10px;
+}
+
+.img_link img{
+    margin-left: 10px;
+}
+
+.tabs{
+    width: 90%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.tab{
+    min-width: 120px;
+    max-width: 200px;
+    height: 65px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #d7d7da;
+    border-inline: 1px solid #d7d7da;
+    background: #f8f8fa;
+}
+
+.tab:hover{
+    cursor: default;
+    filter: brightness(97%);
+}
+
+.tab span{
+    margin-right: auto;
+    margin-left: 8px;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.inicio{
+    background: #FFF1EA;
+}
+
+.closeTab{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 20px;
+    background: none;
+    transition: background 0.2s ease;
+}
+
+.closeTab:hover{
+    color: #fff;
+    background: #ff3d3d;
+    cursor: pointer;
+}
+
+.openTab{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 200;
+    background: none;
+    border: none;
+    background: #f8f8fa;
+    transition: filter 0.2s ease;
+}
+
+.openTab:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.left_side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right_side {
+    display: flex;
+    align-items: center;
+}
+
+.configuracoes_popovergear {
+    display: none;
+    margin-right: 20px;
+    height: 60%;
+    width: 50px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    background-size: fit;
+    anchor-name: --gear;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 26 26' fill='none' stroke='black' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><g vector-effect='non-scaling-stroke'><path d='M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915'/><circle cx='12' cy='12' r='3'/></g></svg>");
+}
+
+.configuracoes_botao_container {
+    display: block;
+    background-color: #ffc08c;
+    position: fixed;
+    position-anchor: --gear;
+    position-area: bottom;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.configuracoes_botao {
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.configuracoes_botao:hover {
+    background-color: #d66000;
+}
+
+@media (max-width: 1220px){
+    /* Botão da sidebar */
+    .hamburger {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        background: none;
+        border: none;
+        margin-left: 10px;
+        transition: background 0.2s ease;
+    }
+
+    .hamburger.active{
+        background: #4b4b4b;
+        color: #fff;
+    }
+
+    .tabs{
+        width: 80%;
+    }
+}

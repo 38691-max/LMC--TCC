@@ -44,12 +44,11 @@ O sistema permite que os usuários possam **[descrever as funcionalidades princi
 ## ✅ Funcionalidades
 
 * ✅ Autenticação de usuários (login e cadastro)
-* ✅ Controle de acesso por perfil
 * ✅ Gerenciamento de dados da aplicação
 * ✅ Painel administrativo
 * ✅ Integração com banco de dados MySQL
 * ✅ Banco modelado pelo Prisma ORM
-* ✅ Banco do Docker
+* ✅ Banco de um container do Docker
 * ✅ Responsividade para dispositivos móveis
 * ✅ Interface moderna e intuitiva com Shadcn
 
