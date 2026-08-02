@@ -1,14 +1,15 @@
 import styles from "@/styles/ContaNavbar.module.css";
-import usuario from "@/public/usuario.png"
-import cadeado from '@/public/cadeado.png'
-import paleta from '@/public/paleta.png'
-import pessoa from '@/public/pessoa.png'
-import autenticacao from '@/public/autenticacao.png'
+import {
+  User,
+  Lock,
+  Palette,
+  Accessibility,
+  ShieldCheck,
+} from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 export function ContaNavbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -21,17 +22,35 @@ export function ContaNavbar() {
       </button>
 
       <div className={`${styles.ContaNavbar} ${menuOpen ? styles.open : ""}`}>
-
         <div className={styles.areaTitulo}>
           <span>Conta</span>
         </div>
 
-        <button className={styles.button}> <Image src={usuario} width='30px' height='30px' /> Perfil</button>
-        <button className={styles.button}> <Image src={cadeado} width='30px' height='30px' />Acesso</button>
-        <button className={styles.button}> <Image src={paleta} width='30px' height='30px' />Aparência</button>
-        <button className={styles.button}> <Image src={pessoa} width='30px' height='30px' />Acessibilidade</button>
-        <button className={styles.button}> <Image src={autenticacao} width='30px' height='30px' />Autenticação</button>
+        <Link href="/profile" className={styles.button}>
+          <User size={30} strokeWidth={2} />
+          Perfil
+        </Link>
+
+        <button className={styles.button}>
+          <Lock size={30} strokeWidth={2} />
+          Acesso
+        </button>
+
+        <button className={styles.button}>
+          <Palette size={30} strokeWidth={2} />
+          Aparência
+        </button>
+
+        <button className={styles.button}>
+          <Accessibility size={30} strokeWidth={2} />
+          Acessibilidade
+        </button>
+
+        <button className={styles.button}>
+          <ShieldCheck size={30} strokeWidth={2} />
+          Autenticação
+        </button>
       </div>
     </>
-  )
+  );
 }

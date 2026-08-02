@@ -1,9 +1,11 @@
 import styles from "@/styles/TopNavbar.module.css";
 import lmc_logo from "@/public/lmcplusv2.png";
-import casa from '@/public/casa.png';
+
+import { House } from "lucide-react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { ThemeSwitcher } from "./kibo-ui/theme-switcher";
 
 export function TopNavbar({
   menuOpen,
@@ -33,29 +35,24 @@ export function TopNavbar({
             className={styles.lmc_logo}
           />
         </Link>
-
       </div>
 
       {/* Sistema de abas */}
       <div className={styles.tabs}>
         <Link
           href="/"
-          title="Inicio"
+          title="Início"
           className={`${styles.tab} ${styles.inicio}`}
         >
-          <Image
-            src={casa}
-            width={30}
-            height={30}
-            alt="Início"
-          />
+          <House size={30} strokeWidth={2} />
+
           <span>Início</span>
+
           <button className={styles.closeTab}>×</button>
         </Link>
         <button className={styles.openTab}>+</button>
+        <ThemeSwitcher className="ml-3"/>
       </div>
-
-
     </div>
   );
 }

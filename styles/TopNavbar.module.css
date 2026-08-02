@@ -1,6 +1,5 @@
 .horizontal_bar {
     width: 100%;
-    background: #f8f8fa;
     border-bottom: 1px solid #d7d7da;
     height: 65px;
     position: fixed;
@@ -47,7 +46,6 @@
     border: none;
     border-bottom: 1px solid #d7d7da;
     border-inline: 1px solid #d7d7da;
-    background: #f8f8fa;
 }
 
 .tab:hover{
@@ -85,7 +83,6 @@
 
 .closeTab:hover{
     color: #fff;
-    background: #ff3d3d;
     cursor: pointer;
 }
 
