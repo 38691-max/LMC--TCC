@@ -13,9 +13,6 @@ export function Dashboard() {
     <main className={styles.main}>
       {/* Chama o componente da nav vertical esquerda */}
       <SideNavbar menuOpen={menuOpen} />
-      {open && (
-        <div className={styles.overlay} onClick={() => setOpen(false)} />
-      )}
       {/* Chama o componente da nav horizontal no topo */}
       <TopNavbar
         menuOpen={menuOpen}
