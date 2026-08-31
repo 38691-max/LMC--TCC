@@ -120,9 +120,11 @@ export function RootPage() {
                   ...transitionVariants,
                 }}
               >
-                <Button variant="outline" className="mt-6">
-                  <Link href="/dashboard">Programação</Link>
-                </Button>
+                <Link href="/dashboard">
+                  <Button variant="default" className="mt-6">
+                    Programação
+                  </Button>
+                </Link>
               </AnimatedGroup>
 
             </div>
@@ -161,10 +163,10 @@ export function RootPage() {
             </div>
           </AnimatedGroup>
         </div>
-      </section>
+      </section >
 
       {/* Seção Sobre Nós */}
-      <section className="bg-background pb-16 pt-16 md:pb-20">
+      <section className="bg-background pb-16 pt-16 md:pb-20" >
         <AnimatedGroup
           variants={{
             container: {
@@ -180,7 +182,7 @@ export function RootPage() {
         >
           <History />
         </AnimatedGroup>
-      </section>
+      </section >
     </>
   );
 }
