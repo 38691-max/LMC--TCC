@@ -3,7 +3,7 @@ import Image from "next/image"
 import Background from "@/public/background.png"
 import { Metadata } from "next"
 import { Header } from "@/components/header"
-import Footer from "@/components/footer"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Página de Cadastro",
@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 export default function SignupPage() {
   return (
     <>
-      <Header />
+      <div className="container">
+        <Header />
+      </div>
       <div className="grid min-h-svh lg:grid-cols-2">
         <div className="flex flex-col gap-4 p-6 md:p-10 mt-36">
           <div className="flex flex-1 items-center justify-center">

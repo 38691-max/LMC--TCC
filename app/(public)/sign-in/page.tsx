@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SignInForm } from "@/components/sign-in-form";
 import { Metadata } from "next";
@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function SignInPage() {
   return (
     <>
-      <Header />
+      <div className="container">
+        <Header />
+      </div>
       <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-muted p-6 md:p-10">
         <div className="flex w-full max-w-sm flex-col gap-6 mt-36">
           <SignInForm />
