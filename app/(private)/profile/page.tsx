@@ -1,5 +1,3 @@
-import { Perfil } from "@/components/Perfil"
-
 export default function ProfilePage() {
-  return <Perfil />
+  return <h1>eufbe</h1>
 }

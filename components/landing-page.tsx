@@ -1,28 +1,14 @@
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
 import { AnimatedGroup } from "@/components/motion-primitivies/animated-group";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/motion-primitivies/text-effect";
 import { Header } from "./header";
 import Image from "next/image";
 import { Variants } from 'motion/react';
-import {
-  RiNextjsFill,
-} from "react-icons/ri";
-import {
-  SiPrisma,
-  SiGoogle,
-  SiGithub,
-  SiVercel,
-  SiShadcnui,
-  SiBetterauth,
-} from "react-icons/si";
-import { ShieldCheck } from "lucide-react";
-import { IconType } from "react-icons/lib";
-import { FaDocker } from "react-icons/fa6";
 import Footer from "./footer";
 import Lifestyle from "@/public/lifestyle.png";
 import VibrantParty from "@/public/vibrant-party.png";
+import { History } from "./history";
 
 export const transitionVariants: {
   item: Variants;
@@ -47,46 +33,6 @@ export const transitionVariants: {
     },
   },
 };
-
-type DevStack = {
-  name: string;
-  icon: IconType | typeof ShieldCheck;
-};
-
-const devStacks: DevStack[] = [
-  {
-    name: "Next.js",
-    icon: RiNextjsFill,
-  },
-  {
-    name: "Prisma ORM",
-    icon: SiPrisma,
-  },
-  {
-    name: "Better Auth",
-    icon: SiBetterauth,
-  },
-  {
-    name: "Google",
-    icon: SiGoogle,
-  },
-  {
-    name: "GitHub",
-    icon: SiGithub,
-  },
-  {
-    name: "Vercel",
-    icon: SiVercel,
-  },
-  {
-    name: "shadcn/ui",
-    icon: SiShadcnui,
-  },
-  {
-    name: "Docker",
-    icon: FaDocker,
-  }
-];
 
 export default function LandingPage() {
   return (
@@ -146,7 +92,7 @@ export default function LandingPage() {
 
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-                
+
                 <TextEffect
                   preset="fade-in-blur"
                   speedSegment={0.3}
@@ -165,6 +111,24 @@ export default function LandingPage() {
                 >
                   A LMC+ é um canal de entretenimento com programação variada para toda a família, reunindo filmes, séries, desenhos, música, esportes e conteúdos educativos 24 horas por dia.
                 </TextEffect>
+                <AnimatedGroup
+                  variants={{
+                    container: {
+                      visible: {
+                        transition: {
+                          staggerChildren: 0.05,
+                          delayChildren: 0.75,
+                        },
+                      },
+                    },
+                    ...transitionVariants,
+                  }}
+                >
+                  <Button variant="outline" className="mt-6">
+                    <Link href="/dashboard">Programação</Link>
+                  </Button>
+                </AnimatedGroup>
+
               </div>
             </div>
 
@@ -202,40 +166,25 @@ export default function LandingPage() {
             </AnimatedGroup>
           </div>
         </section>
-        <AnimatedGroup
-          variants={{
-            container: {
-              visible: {
-                transition: {
-                  staggerChildren: 0.05,
-                  delayChildren: 0.75,
+
+        {/* Seção Sobre Nós */}
+        <section className="bg-background pb-16 pt-16 md:pb-20">
+          <AnimatedGroup
+            variants={{
+              container: {
+                visible: {
+                  transition: {
+                    staggerChildren: 0.05,
+                    delayChildren: 0.5,
+                  },
                 },
               },
-            },
-            ...transitionVariants,
-          }}
-        >
-          <section className="bg-background pb-16 pt-16 md:pb-32">
-            <div className="group relative m-auto max-w-5xl px-6">
-              <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                <Link
-                  href="/integrations"
-                  className="block text-sm duration-150 hover:opacity-75"
-                >
-                  <span>Explore todas as integrações da aplicação</span>
-                  <ChevronRight className="ml-1 inline-block size-3" />
-                </Link>
-              </div>
-              <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                {devStacks.map((stack) => (
-                  <div key={stack.name} className="flex">
-                    <stack.icon className="size-12" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </AnimatedGroup>
+              ...transitionVariants,
+            }}
+          >
+            <History />
+          </AnimatedGroup>
+        </section>
         <Footer />
       </main>
     </>
